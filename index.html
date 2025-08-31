@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Accessories</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- Custom CSS -->
+    <style>
+        body { font-family: Arial, sans-serif; margin:0; padding:0; }
+.navbar {
+    background-color: #1F2937; /* dark slate gray */
+}
+.navbar a {
+    color: #F9FAFB; /* soft white/light gray */
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #3B82F6; /* bright blue for highlight */
+}
+.navbar a.active {
+    color: #FBBF24; /* amber/yellow highlight */}
+
+/* Dropdown menu container */
+.navbar .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.95); /* সাদা background, কিন্তু হালকা opacity */
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Dropdown links */
+.navbar .dropdown-menu a {
+    color: #1F2937; /* dark text, clear contrast */
+    font-weight: 500;
+    padding: 8px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Hover effect */
+.navbar .dropdown-menu a:hover {
+    background-color: #3B82F6; /* hover background */
+    color: #fff; /* hover text color */
+}
+
+
+
+        .hero-slider img { width: 100%; height: 500px; object-fit: cover; }
+        .products-section { padding: 50px 0; text-align: center; }
+        .product-card { border: 1px solid #ddd; padding: 15px; margin: 15px; transition: 0.3s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .info-section { padding: 50px 0; background-color: #f9f9f9; text-align: center; }
+        .footer { background-color: #222; color: #fff; padding: 30px 0; }
+        .footer a { color: #fff; text-decoration: none; }
+        .footer a:hover { color: #f0a500; }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">RSS Accessories</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">General Packaging</a></li>
+            <li><a class="dropdown-item" href="#">Sewing Threads</a></li>
+            <li><a class="dropdown-item" href="#">Hangers</a></li>
+            <li><a class="dropdown-item" href="#">Poly Bags</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Slider -->
+<div class="hero-slider">
+  <div><img src="images/home-slider/5.jpg" alt="Slide 1"></div>
+  <div><img src="images/home-slider/6.jpg" alt="Slide 2"></div>
+  <div><img src="images/home-slider/7.jpg" alt="Slide 3"></div>
+</div>
+
+<!-- Products Section -->
+<div class="products-section container">
+  <h2>Our Products</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="product-card">
+        <img src="images/home/products/packaging.jpg" class="img-fluid" alt="Product 1">
+        <h5>General Packaging</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-card">
+        <img src="images/home/products/elastic.jpg" class="img-fluid" alt="Product 2">
+        <h5>Sewing Threads</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-card">
+        <img src="images/home/products/hanger.jpg" class="img-fluid" alt="Product 3">
+        <h5>Hangers</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-card">
+        <img src="images/home/products/heat-transfer.jpg" class="img-fluid" alt="Product 4">
+        <h5>Poly Bags</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Info Section -->
+<div class="info-section">
+  <h3>Why Choose RSS Accessories?</h3>
+  <p>We offer high-quality products and services for apparel trims and packaging. Two plants in strategic locations ensure timely delivery and top-quality production.</p>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="container text-center">
+    <p>© 2025 RSS Accessories. All rights reserved.</p>
+    <p>
+      <a href="#">Home</a> | 
+      <a href="#">Products</a> | 
+      <a href="#">About Us</a> | 
+      <a href="#">Contact</a>
+    </p>
+  </div>
+</div>
+
+<!-- JS Libraries -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- Custom JS -->
+<script>
+$(document).ready(function(){
+    $('.hero-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: true,
+        dots: true,
+        fade: true,
+        speed: 1000
+    });
+});
+</script>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include Slick Slider JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.hero-slider').slick({
+        autoplay: true,       // স্বয়ংক্রিয়ভাবে slide হবে
+        autoplaySpeed: 3000,  // প্রতিটি slide 3 সেকেন্ডে change হবে
+        arrows: true,         // next-prev arrow দেখাবে
+        dots: true,           // নিচে navigation dots দেখাবে
+        fade: true,           // fade effect
+        speed: 1000           // transition speed
+    });
+});
+</script>
+
+
+</body>
+</html>
