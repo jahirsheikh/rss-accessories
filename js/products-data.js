@@ -147,7 +147,7 @@ const PRODUCT_CATEGORIES = {
 const CONTACT_INFO = {
     phone: '+8801660200966',
     email: 'rssaccessories0@gmail.com',
-    whatsapp: 'https://wa.me/8801660200966',
+    whatsapp: '8801660200966',
     address: 'House# 17 (2nd Fl), Road# 3/A, Sector # 15/F, Uttara, Dhaka-1230.',
     workingHours: 'Mon - Fri: 9:00 AM - 6:00 PM'
 };
