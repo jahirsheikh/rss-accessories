@@ -143,13 +143,23 @@ const PRODUCT_CATEGORIES = {
 };
 
 // Company contact information
+
 const CONTACT_INFO = {
-    phone: '+880 1660-200966',
+    phone: '+8801660200966',
     email: 'rssaccessories0@gmail.com',
-    whatsapp: '+880 1660-200966',
+    whatsapp: 'https://wa.me/8801660200966',
     address: 'House# 17 (2nd Fl), Road# 3/A, Sector # 15/F, Uttara, Dhaka-1230.',
     workingHours: 'Mon - Fri: 9:00 AM - 6:00 PM'
 };
+
+
+// const CONTACT_INFO = {
+//     phone: '+880 1660-200966',
+//     email: 'rssaccessories0@gmail.com',
+//     whatsapp: '+880 1660-200966',
+//     address: 'House# 17 (2nd Fl), Road# 3/A, Sector # 15/F, Uttara, Dhaka-1230.',
+//     workingHours: 'Mon - Fri: 9:00 AM - 6:00 PM'
+// };
 
 // Export for use in other files
 if (typeof module !== 'undefined' && module.exports) {
