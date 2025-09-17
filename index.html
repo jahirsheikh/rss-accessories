@@ -3,185 +3,727 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSS Accessories</title>
+    <title>RSS Accessories - Quality Apparel Trims & Packaging</title>
+    <meta name="description" content="High-quality apparel trims, packaging, sewing threads, hangers, and poly bags. Two strategic plant locations for timely delivery.">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Slick Slider CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        body { font-family: Arial, sans-serif; margin:0; padding:0; }
-.navbar {
-    background-color: #1F2937; /* dark slate gray */
-}
-.navbar a {
-    color: #F9FAFB; /* soft white/light gray */
-    transition: color 0.3s ease;
-}
-.navbar a:hover {
-    color: #3B82F6; /* bright blue for highlight */
-}
-.navbar a.active {
-    color: #FBBF24; /* amber/yellow highlight */}
+        :root {
+            --primary-color: #1F2937;
+            --secondary-color: #3B82F6;
+            --accent-color: #FBBF24;
+            --light-gray: #F9FAFB;
+            --dark-gray: #374151;
+            --success-color: #10B981;
+        }
 
-/* Dropdown menu container */
-.navbar .dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.95); /* সাদা background, কিন্তু হালকা opacity */
-    padding: 10px;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Dropdown links */
-.navbar .dropdown-menu a {
-    color: #1F2937; /* dark text, clear contrast */
-    font-weight: 500;
-    padding: 8px 15px;
-    display: block;
-    text-decoration: none;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
 
-/* Hover effect */
-.navbar .dropdown-menu a:hover {
-    background-color: #3B82F6; /* hover background */
-    color: #fff; /* hover text color */
-}
+        /* Navbar Improvements */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #374151 100%);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
 
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--light-gray) !important;
+        }
 
+        .navbar-nav .nav-link {
+            color: var(--light-gray) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            margin: 0 2px;
+        }
 
-        .hero-slider img { width: 100%; height: 500px; object-fit: cover; }
-        .products-section { padding: 50px 0; text-align: center; }
-        .product-card { border: 1px solid #ddd; padding: 15px; margin: 15px; transition: 0.3s; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .info-section { padding: 50px 0; background-color: #f9f9f9; text-align: center; }
-        .footer { background-color: #222; color: #fff; padding: 30px 0; }
-        .footer a { color: #fff; text-decoration: none; }
-        .footer a:hover { color: #f0a500; }
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-color) !important;
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-1px);
+        }
+
+        .dropdown-menu {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-item {
+            color: var(--primary-color) !important;
+            padding: 0.7rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background: var(--secondary-color);
+            color: white !important;
+            transform: translateX(5px);
+        }
+
+        /* Hero Slider Improvements */
+        .hero-section {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        .hero-slider {
+            height: 100%;
+        }
+
+        .hero-slider img {
+            width: 100%;
+            height: 70vh;
+            min-height: 500px;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(31, 41, 55, 0.6), rgba(31, 41, 55, 0.4));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--secondary-color), #2563EB);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+            color: white;
+        }
+
+        /* Slick Slider Customization */
+        .slick-dots {
+            bottom: 30px;
+        }
+
+        .slick-dots li button:before {
+            font-size: 12px;
+            color: white;
+            opacity: 0.7;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: var(--accent-color);
+            opacity: 1;
+        }
+
+        .slick-prev, .slick-next {
+            z-index: 3;
+            width: 50px;
+            height: 50px;
+        }
+
+        .slick-prev:before, .slick-next:before {
+            font-size: 30px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            height: 100%;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: var(--secondary-color);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-card h5 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .product-card p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #374151 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .info-section h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+        }
+
+        .info-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .features-grid {
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h5 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #111827 0%, var(--primary-color) 100%);
+            color: var(--light-gray);
+            padding: 50px 0 30px;
+        }
+
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+
+        .footer h5 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .footer a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .social-links a {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(249, 250, 251, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .product-card {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 50vh;
+                min-height: 400px;
+            }
+            
+            .hero-slider img {
+                height: 50vh;
+                min-height: 400px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Loading Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--secondary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+        }
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">RSS Accessories</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a class="navbar-brand" href="#"><i class="fas fa-industry me-2"></i>RSS Accessories</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#home"><i class="fas fa-home me-1"></i>Home</a>
+        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
+          <a class="nav-link dropdown-toggle" href="#products" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-box me-1"></i>Products
+          </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">General Packaging</a></li>
-            <li><a class="dropdown-item" href="#">Sewing Threads</a></li>
-            <li><a class="dropdown-item" href="#">Hangers</a></li>
-            <li><a class="dropdown-item" href="#">Poly Bags</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fas fa-package me-2"></i>General Packaging</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fas fa-cut me-2"></i>Sewing Threads</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fas fa-tshirt me-2"></i>Hangers</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fas fa-shopping-bag me-2"></i>Poly Bags</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about"><i class="fas fa-info-circle me-1"></i>About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i>Contact</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero Slider -->
-<div class="hero-slider">
-  <div><img src="images/home-slider/5.jpg" alt="Slide 1"></div>
-  <div><img src="images/home-slider/6.jpg" alt="Slide 2"></div>
-  <div><img src="images/home-slider/7.jpg" alt="Slide 3"></div>
-</div>
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="hero-slider">
+    <div><img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Manufacturing Excellence" loading="lazy"></div>
+    <div><img src="https://images.unsplash.com/photo-1565728744382-61accd4aa148?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Quality Products" loading="lazy"></div>
+    <div><img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Professional Service" loading="lazy"></div>
+  </div>
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1 class="fade-in">Quality Apparel Accessories</h1>
+      <p class="fade-in">Leading manufacturer of premium packaging, threads, hangers, and poly bags with over a decade of excellence</p>
+      <a href="#products" class="cta-button fade-in">Explore Our Products</a>
+    </div>
+  </div>
+</section>
 
 <!-- Products Section -->
-<div class="products-section container">
-  <h2>Our Products</h2>
-  <div class="row">
-    <div class="col-md-3">
-      <div class="product-card">
-        <img src="images/home/products/packaging.jpg" class="img-fluid" alt="Product 1">
-        <h5>General Packaging</h5>
-      </div>
+<section id="products" class="products-section">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Our Premium Products</h2>
+      <p>Discover our comprehensive range of high-quality apparel accessories and packaging solutions</p>
     </div>
-    <div class="col-md-3">
-      <div class="product-card">
-        <img src="images/home/products/elastic.jpg" class="img-fluid" alt="Product 2">
-        <h5>Sewing Threads</h5>
+    
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card fade-in">
+          <i class="fas fa-box product-icon"></i>
+          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="General Packaging" loading="lazy">
+          <h5>General Packaging</h5>
+          <p>Comprehensive packaging solutions designed to protect and present your products professionally with eco-friendly materials.</p>
+        </div>
       </div>
-    </div>
-    <div class="col-md-3">
-      <div class="product-card">
-        <img src="images/home/products/hanger.jpg" class="img-fluid" alt="Product 3">
-        <h5>Hangers</h5>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card fade-in">
+          <i class="fas fa-cut product-icon"></i>
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sewing Threads" loading="lazy">
+          <h5>Sewing Threads</h5>
+          <p>Premium quality threads in various colors and materials, engineered for durability and perfect stitching results.</p>
+        </div>
       </div>
-    </div>
-    <div class="col-md-3">
-      <div class="product-card">
-        <img src="images/home/products/heat-transfer.jpg" class="img-fluid" alt="Product 4">
-        <h5>Poly Bags</h5>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card fade-in">
+          <i class="fas fa-tshirt product-icon"></i>
+          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Hangers" loading="lazy">
+          <h5>Premium Hangers</h5>
+          <p>Stylish and durable hangers available in multiple materials and designs to enhance your retail presentation.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card fade-in">
+          <i class="fas fa-shopping-bag product-icon"></i>
+          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Poly Bags" loading="lazy">
+          <h5>Poly Bags</h5>
+          <p>High-quality poly bags in various sizes and specifications, perfect for packaging and protecting garments.</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Info Section -->
-<div class="info-section">
-  <h3>Why Choose RSS Accessories?</h3>
-  <p>We offer high-quality products and services for apparel trims and packaging. Two plants in strategic locations ensure timely delivery and top-quality production.</p>
-</div>
+<section id="about" class="info-section">
+  <div class="container">
+    <div class="fade-in">
+      <h3>Why Choose RSS Accessories?</h3>
+      <p>With over a decade of excellence in the apparel accessories industry, we combine traditional craftsmanship with modern technology. Our two strategically located manufacturing plants ensure consistent quality, competitive pricing, and timely delivery to clients worldwide.</p>
+    </div>
+    
+    <div class="row features-grid">
+      <div class="col-md-4">
+        <div class="feature-item fade-in">
+          <i class="fas fa-award"></i>
+          <h5>Premium Quality</h5>
+          <p>Rigorous quality control ensures every product meets international standards</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-item fade-in">
+          <i class="fas fa-shipping-fast"></i>
+          <h5>Fast Delivery</h5>
+          <p>Strategic plant locations guarantee quick turnaround times globally</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-item fade-in">
+          <i class="fas fa-handshake"></i>
+          <h5>Trusted Partnership</h5>
+          <p>Building lasting relationships with clients through reliable service</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
-<div class="footer">
-  <div class="container text-center">
-    <p>© 2025 RSS Accessories. All rights reserved.</p>
-    <p>
-      <a href="#">Home</a> | 
-      <a href="#">Products</a> | 
-      <a href="#">About Us</a> | 
-      <a href="#">Contact</a>
-    </p>
+<footer id="contact" class="footer">
+  <div class="container">
+    <div class="row footer-content">
+      <div class="col-md-4">
+        <h5><i class="fas fa-industry me-2"></i>RSS Accessories</h5>
+        <p>Your trusted partner for premium apparel accessories and packaging solutions. Quality, reliability, and innovation since 2010.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <h5><i class="fas fa-sitemap me-2"></i>Quick Links</h5>
+        <div class="row">
+          <div class="col-6">
+            <a href="#home">Home</a><br>
+            <a href="#products">Products</a><br>
+            <a href="#about">About Us</a><br>
+          </div>
+          <div class="col-6">
+            <a href="#contact">Contact</a><br>
+            <a href="#">Privacy Policy</a><br>
+            <a href="#">Terms of Service</a><br>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <h5><i class="fas fa-map-marker-alt me-2"></i>Contact Info</h5>
+        <p><i class="fas fa-phone me-2"></i>+880 123 456 789</p>
+        <p><i class="fas fa-envelope me-2"></i>info@rssaccessories.com</p>
+        <p><i class="fas fa-clock me-2"></i>Mon - Fri: 9:00 AM - 6:00 PM</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 RSS Accessories. All rights reserved. | Designed with ❤️ for excellence</p>
+    </div>
   </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<div class="scroll-top" id="scrollTop">
+  <i class="fas fa-chevron-up"></i>
 </div>
 
-<!-- JS Libraries -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-<!-- Custom JS -->
+<!-- Custom JavaScript -->
 <script>
 $(document).ready(function(){
+    // Initialize Slick Slider
     $('.hero-slider').slick({
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 5000,
         arrows: true,
         dots: true,
         fade: true,
-        speed: 1000
+        speed: 1200,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
+    });
+
+    // Smooth scrolling for navigation links
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        const target = $($(this).attr('href'));
+        if(target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - 70
+            }, 800, 'swing');
+        }
+    });
+
+    // Fade in animation on scroll
+    function checkFadeIn() {
+        $('.fade-in').each(function() {
+            const elementTop = $(this).offset().top;
+            const elementBottom = elementTop + $(this).outerHeight();
+            const viewportTop = $(window).scrollTop();
+            const viewportBottom = viewportTop + $(window).height();
+
+            if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                $(this).addClass('show');
+            }
+        });
+    }
+
+    // Initial check
+    checkFadeIn();
+
+    // Check on scroll
+    $(window).scroll(function() {
+        checkFadeIn();
+        
+        // Show/hide scroll to top button
+        if ($(this).scrollTop() > 100) {
+            $('#scrollTop').fadeIn().css('display', 'flex');
+        } else {
+            $('#scrollTop').fadeOut();
+        }
+    });
+
+    // Scroll to top functionality
+    $('#scrollTop').click(function() {
+        $('html, body').animate({scrollTop: 0}, 800);
+        return false;
+    });
+
+    // Add active class to navigation
+    $(window).scroll(function() {
+        const scrollDistance = $(window).scrollTop();
+        
+        $('section').each(function(i) {
+            if ($(this).position().top <= scrollDistance + 100) {
+                $('.navbar-nav a.active').removeClass('active');
+                $('.navbar-nav a').eq(i).addClass('active');
+            }
+        });
+    }).scroll();
+
+    // Product card hover effects
+    $('.product-card').hover(
+        function() {
+            $(this).find('img').css('transform', 'scale(1.1)');
+        },
+        function() {
+            $(this).find('img').css('transform', 'scale(1)');
+        }
+    );
+
+    // Loading screen (optional)
+    $(window).on('load', function() {
+        $('body').addClass('loaded');
+        setTimeout(function() {
+            $('.fade-in').first().addClass('show');
+        }, 200);
+    });
+
+    // Navbar background change on scroll
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('.navbar').addClass('navbar-scrolled');
+        } else {
+            $('.navbar').removeClass('navbar-scrolled');
+        }
     });
 });
 </script>
-
-<!-- Include jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Include Slick Slider JS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-<script>
-$(document).ready(function(){
-    $('.hero-slider').slick({
-        autoplay: true,       // স্বয়ংক্রিয়ভাবে slide হবে
-        autoplaySpeed: 3000,  // প্রতিটি slide 3 সেকেন্ডে change হবে
-        arrows: true,         // next-prev arrow দেখাবে
-        dots: true,           // নিচে navigation dots দেখাবে
-        fade: true,           // fade effect
-        speed: 1000           // transition speed
-    });
-});
-</script>
-
 
 </body>
 </html>
