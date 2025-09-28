@@ -30,6 +30,22 @@ body {
    Navigation Styles
    ========================================== */
 
+   .navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 120px;
+        height: auto;
+    }
+}
+
 .navbar {
     background: linear-gradient(135deg, var(--primary-color) 0%, #374151 100%);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
