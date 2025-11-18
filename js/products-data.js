@@ -104,6 +104,45 @@ twillTape: {
     }
 },
 
+wovenLabel: {
+    id: 'wovenLabel',
+    title: 'Premium Woven Labels',
+    category: 'Fashion Accessories',
+    type: 'accessories',
+    badge: 'High-End Branding',
+    image: 'images/home/products/oven lable.jpeg',
+
+    description: 'Premium woven labels engineered for high-quality garment branding. Manufactured using computerized looms to ensure clarity, durability, and fine detailing. Ideal for neck labels, brand labels, care labels, and decorative garment accents. Offers superior color fastness, soft edges, and customizable weaves.',
+
+    features: [
+        'High-Density Weaving Technology',
+        'Ultra-Clear Text & Logo Details',
+        'Soft Edges for Skin Comfort',
+        'Long-Lasting Color Fastness',
+        'Custom Sizes, Colors & Weave Styles',
+        'Available in Satin, Damask & Taffeta',
+        'Heat Cut, Ultrasonic Cut & Fold Options',
+        'Eco-Friendly Yarn Options available'
+    ],
+
+    specifications: {
+        'Material': 'Polyester Woven Yarn / Recycled Polyester',
+        'Weave Types': 'Damask, Satin, Taffeta, High-Density Damask',
+        'Cutting Methods': 'Heat Cut, Laser Cut, Ultrasonic Cut',
+        'Folding Styles': 'End Fold, Center Fold, Book Fold, Manhattan Fold, Mitre Fold',
+        'Color Options': 'Up to 12 Colors / Pantone Matched',
+        'Size Range': 'Fully Custom (Standard: 10mm–60mm Width)',
+        'Finish Options': 'Softening, Anti-Fray, Starch Finish',
+        'Edges': 'Soft Edge / Woven Edge / Heat-Sealed Edge',
+        'Durability': 'Wash-Resistant, Fade-Resistant, High-Stretch Tolerance',
+        'Applications': 'Neck Label, Brand Label, Care Label, Decorative Patch',
+        'MOQ': '3000 pieces per design',
+        'Lead Time': '12–16 Days',
+        'Packaging': 'Bundle Pack / Poly Bag / Custom Branding Pack'
+    }
+},
+
+
 drawstring: {
     id: 'drawstring',
     title: 'Premium Drawstring Cords',
