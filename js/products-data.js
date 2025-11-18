@@ -4,6 +4,142 @@
  */
 
 const PRODUCT_DATA = {
+leatherPatch: {
+    id: 'leatherPatch',
+    title: 'Premium Leather Patches',
+    category: 'Fashion Accessories',
+    type: 'accessories',
+    badge: 'High-End Branding',
+    image: 'images/home/products/Authentic leather patch.jpeg',
+    description: 'High-quality leather patches designed for premium garment branding. Crafted using genuine and synthetic leather with precision embossing, debossing, laser cutting, and multi-tone finishing. Ideal for denim, jackets, bags, uniforms, and high-end apparel labels.',
+    features: [
+        'Genuine & PU Leather Options',
+        'Emboss/Deboss & Multi-Depth Effects',
+        'Laser Cutting Precision',
+        'Heat Press / Stitch-On Variants',
+        'Wash-Resistant & Long-Lasting',
+        'Custom Shapes & Multi-Color Finishing'
+    ],
+    specifications: {
+        'Material': 'Genuine Leather / PU Leather / Synthetic Leather',
+        'Thickness': '1.2mm to 3.0mm',
+        'Branding Methods': 'Emboss, Deboss, Laser Cut, Screen Print, Foil Stamp, Edge Painting',
+        'Attachment Options': 'Sew-on, Heat Seal, Velcro, Adhesive Backing',
+        'Sizes': 'Fully Custom (Square, Rectangle, Oval, Freeform Shapes)',
+        'Colors': 'Natural Tones / Custom Pantone Colors',
+        'MOQ': '1000 pieces/design',
+        'Lead Time': '12–18 Days',
+        'Packaging': 'Custom Cards / Bundled Packs / Bulk'
+    }
+},
+
+rubberLabel: {
+    id: 'rubberLabel',
+    title: 'Premium Rubber Labels',
+    category: 'Fashion Accessories',
+    type: 'accessories',
+    badge: 'High-Durability Branding',
+    image: 'images/home/products/Different type rubber label@1.jpeg',
+    description: 'High-performance rubber labels crafted from premium PVC, Silicone, or TPU materials. Designed for bold, long-lasting apparel branding with vibrant colors, 2D/3D effects, and superior flexibility. Ideal for jackets, denim, bags, sportswear, and outdoor garments.',
+
+    features: [
+        'Soft & Flexible Rubber Material',
+        '2D, 2.5D & 3D Multi-Layer Effects',
+        'Highly Durable & Weather Resistant',
+        'Vibrant Multi-Color Molding',
+        'Custom Shapes & Modern Designs',
+        'Waterproof, UV-Resistant & Wash-Resistant',
+        'Multiple Attachment Options',
+        'Ideal for Outdoor & Sportswear Branding'
+    ],
+
+    specifications: {
+        'Material': 'PVC Rubber / Silicone Rubber / TPU Rubber',
+        'Branding Methods': '2D Mold, 3D Mold, Emboss, Deboss, Multi-Layer Injection',
+        'Attachment Options': 'Sew-On, Heat Seal, Velcro, Adhesive Backing',
+        'Sizes': 'Fully Custom (Any Shape, Any Dimension)',
+        'Colors': 'Single Color / Multi-Color / Pantone Color Matching',
+        'Thickness': '1.0mm – 3.0mm',
+        'Hardness': '50–70 Shore A (depending on material)',
+        'Temperature Resistance': '-40°C to +200°C',
+        'Durability': 'Waterproof, Crack-Resistant, UV Resistant, Wash-Resistant',
+        'MOQ': '1000–1500 pieces per design',
+        'Lead Time': '10–18 Days',
+        'Packaging': 'Poly Bag / Bulk Pack / Custom Cards'
+    }
+},
+
+twillTape: {
+    id: 'twillTape',
+    title: 'Premium Twill Tape',
+    category: 'Fashion Accessories',
+    type: 'accessories',
+    badge: 'High-Quality Finishing',
+    image: 'images/home/products/Twill tape.jpeg',
+    description: 'Durable and high-quality twill tape designed for garment reinforcement, branding, binding, and decorative finishing. Produced with precision weaving to ensure consistent texture, strength, and premium appearance. Ideal for apparel, uniforms, home textiles, bags, and packaging applications.',
+
+    features: [
+        'High-Strength Twill Weave Construction',
+        'Soft & Smooth Texture',
+        'Available in Cotton, Polyester & Blended Materials',
+        'Custom Width, Color & Printing Available',
+        'Wash-Resistant & Long-Lasting',
+        'Ideal for Binding, Reinforcement & Decoration',
+        'Eco-Friendly Options Available'
+    ],
+
+    specifications: {
+        'Material': '100% Cotton / Polyester / Cotton-Poly Blend',
+        'Weave Type': 'Twill Weave (Diagonal Pattern)',
+        'Width Options': '6mm, 10mm, 12mm, 15mm, 20mm, 25mm, 30mm (Custom Available)',
+        'Thickness': '0.5mm – 1.2mm',
+        'Color Options': 'Custom Pantone Match, Solid Colors, Natural Dye Options',
+        'Printing Options': 'Screen Print, Heat Transfer Print, Woven Branding',
+        'Finishing': 'Soft, Matte, Mercerized, Anti-Shrink',
+        'Durability': 'Washable, Non-Fraying, Tear-Resistant',
+        'Applications': 'Garments, Labels, Uniforms, Bags, Packaging, Home Textiles',
+        'MOQ': '3000 meters per color/size',
+        'Lead Time': '10–14 Days',
+        'Packaging': 'Rolls / Spools / Custom Branding Packs'
+    }
+},
+
+drawstring: {
+    id: 'drawstring',
+    title: 'Premium Drawstring Cords',
+    category: 'Fashion Accessories',
+    type: 'accessories',
+    badge: 'Customizable Branding',
+    image: 'images/home/products/Drawstring .jpeg',
+
+    description: 'High-quality drawstring cords designed for hoodies, joggers, shorts, bags, and sportswear. Manufactured with premium materials and customizable options including colors, tips, patterns, and branding finishes.',
+
+    features: [
+        'High-Strength Braided or Knitted Construction',
+        'Soft, Durable & Comfortable Feel',
+        'Multiple Material Options',
+        'Custom Color, Pattern & Printing',
+        'Premium Metal/Plastic/Heat-Shrink Tips',
+        'Long-Lasting & Wash-Resistant',
+        'Ideal for Apparel & Bags'
+    ],
+
+    specifications: {
+        'Material': 'Polyester / Cotton / Nylon / Recycled Yarn',
+        'Construction Type': 'Braided / Knitted / Flat / Round',
+        'Diameter Options': '4mm, 6mm, 8mm, 10mm (Custom Available)',
+        'Length': 'Custom (As per requirement)',
+        'Color Options': 'Pantone Matched / Solid / Mélange / Custom Pattern',
+        'Tip Options': 'Metal Aglet, Plastic Aglet, Silicone Tip, Heat-Shrink',
+        'Branding Options': 'Silicone Print, Screen Print, Woven Pattern, Engraved Metal Tips',
+        'Durability': 'Wash-Resistant, Fade-Proof, Anti-Fray',
+        'Applications': 'Hoodies, Joggers, Shorts, Bags, Shoes, Sportswear',
+        'MOQ': '2000 pieces per color/design',
+        'Lead Time': '10–15 Days',
+        'Packaging': 'Bundle Pack / Poly Bag / Custom Cards'
+    }
+},
+
     packaging: {
         id: 'packaging',
         title: 'General Packaging',
@@ -133,6 +269,8 @@ const PRODUCT_DATA = {
             'Packaging': 'Cards/Bulk'
         }
     }
+
+
 };
 
 // Product categories for filtering
