@@ -46,19 +46,19 @@ body {
     }
 }
 
-.navbar {
-    background: #1ba34f !important;   /* Solid Green */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    /* padding: 1rem 0; */
-}
-
-
 /* .navbar {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #64b607 100%);
-    box-shadow: 0 2px 10px rgba(76, 194, 8, 0.1);
+    background: #1ba34f !important;  
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 1rem 0;
-    transition: all 0.3s ease;
 } */
+
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1ba34f 100%);
+    box-shadow: 0 2px 10px rgba(218, 214, 3, 0.1);
+    /* padding: 1rem 0; */
+    transition: all 0.3s ease;
+}
 
 .navbar-brand {
     font-weight: bold;
